@@ -11,6 +11,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 
 namespace HubSpot.NET.Tests.Integration
 {
@@ -335,7 +336,7 @@ namespace HubSpot.NET.Tests.Integration
             {
                 // Assert
                 Assert.IsTrue(ticketAssociations.Associations.AssociatedContacts.Any());
-                Assert.IsNull(ticketAssociations.Associations.AssociatedCompany);
+                Assert.IsNotNull(ticketAssociations.Associations.AssociatedCompany);
             }
             finally
             {
