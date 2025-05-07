@@ -28,7 +28,7 @@
         public T Create<T>(T entity) where T : TicketHubSpotModel, new()
         {
             var path = $"{entity.RouteBasePath}";
-            var data = _client.Execute<T>(path, entity, Method.POST, SerialisationType.PropertyBag);
+            var data = _client.Execute<T>(path, entity, Method.Post, SerialisationType.PropertyBag);
             return data;
         }
 
@@ -44,7 +44,7 @@
 
             try
             {
-                var data = _client.Execute<T>(path, Method.GET, SerialisationType.PropertyBag);
+                var data = _client.Execute<T>(path, Method.Get, SerialisationType.PropertyBag);
                 data.Id = data.ObjectId;
                 return data;
             }
@@ -69,7 +69,7 @@
 
             var path = $"{entity.RouteBasePath}/{entity.Id}";
 
-            var data = _client.Execute<T>(path, entity, Method.PATCH, SerialisationType.PropertyBag);
+            var data = _client.Execute<T>(path, entity, Method.Patch, SerialisationType.PropertyBag);
             return data;
         }
 
@@ -137,7 +137,7 @@
         {
             var path = $"{new TicketHubSpotModel().RouteBasePath}/{ticketId}";
 
-            _client.Execute(path, method: Method.DELETE, convertToPropertiesSchema: true);
+            _client.Execute(path, method: Method.Delete, convertToPropertiesSchema: true);
         }
 
         /// <summary>
@@ -153,7 +153,7 @@
 
             var path = "/crm/v3/objects/tickets/search";
 
-            var data = _client.ExecuteList<SearchHubSpotModel<T>>(path, opts, Method.POST, convertToPropertiesSchema: true);
+            var data = _client.ExecuteList<SearchHubSpotModel<T>>(path, opts, Method.Post, convertToPropertiesSchema: true);
 
             return data;
         }
@@ -172,7 +172,7 @@
             {
                 associationCategory = associationCategory,
                 associationTypeId = associationTypeId
-            }}, method: Method.PUT, convertToPropertiesSchema: true);
+            }}, method: Method.Put, convertToPropertiesSchema: true);
             entity.Associations.AssociatedCompany = new[] { companyId };
             return entity;
         }
@@ -186,7 +186,7 @@
         {
             var path = $"https://api.hubapi.com/crm/v4/objects/tickets/{ticketId}/associations/company/{companyId}";
 
-            _client.Execute(path, method: Method.DELETE, convertToPropertiesSchema: true);
+            _client.Execute(path, method: Method.Delete, convertToPropertiesSchema: true);
         }
 
         /// <summary>
@@ -203,7 +203,7 @@
             {
                 associationCategory = associationCategory,
                 associationTypeId = associationTypeId
-            }}, method: Method.PUT, convertToPropertiesSchema: true);
+            }}, method: Method.Put, convertToPropertiesSchema: true);
             entity.Associations.AssociatedContacts = new[] { contactId };
             return entity;
         }
@@ -217,7 +217,7 @@
         {
             var path = $"https://api.hubapi.com/crm/v4/objects/tickets/{ticketId}/associations/contact/{contactId}";
 
-            _client.Execute(path, method: Method.DELETE, convertToPropertiesSchema: true);
+            _client.Execute(path, method: Method.Delete, convertToPropertiesSchema: true);
         }
 
 		/// <summary>
@@ -234,7 +234,7 @@
             {
                 associationCategory = associationCategory,
                 associationTypeId = associationTypeId
-            }}, method: Method.PUT, convertToPropertiesSchema: true);
+            }}, method: Method.Put, convertToPropertiesSchema: true);
             entity.Associations.AssociatedDeals = new[] { dealId };
             return entity;
         }
@@ -248,7 +248,7 @@
         {
             var path = $"https://api.hubapi.com/crm/v4/objects/tickets/{ticketId}/associations/deal/{dealId}";
 
-            _client.Execute(path, method: Method.DELETE, convertToPropertiesSchema: true);
+            _client.Execute(path, method: Method.Delete, convertToPropertiesSchema: true);
         }
 
         /// <summary>

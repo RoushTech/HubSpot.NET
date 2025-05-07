@@ -27,8 +27,11 @@ namespace HubSpot.NET.Tests.Integration
 				sampleContacts.Add(contact);
 			}
 
-			try
-			{
+            // HubSpot is rather slow to update... wait 5 seconds to allow it to catch up
+            System.Threading.Thread.Sleep(10 * 1000);
+
+            try
+            {
 				var searchOptions = new ContactSearchRequestOptions
 				{
 					Query = "sampledomain.com",

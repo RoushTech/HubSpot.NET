@@ -1,20 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
-		<TargetFrameworks>net452;net451;netstandard2.0</TargetFrameworks>
+		<TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.5.2</Version>
-		<Authors>Chinchilla Software Limited</Authors>
-		<Company>Chinchilla Software Limited</Company>
+		<Version>1.5.3</Version>
+		<Authors>RoushTech, LLC</Authors>
+		<Company>RoushTech, LLC</Company>
 		<Description>C# .NET Wrapper around the common HubSpot APIs.</Description>
-		<Copyright>2023 Chinchilla Software Limited.</Copyright>
-		<!--
-		<PackageLicenseUrl>https://github.com/Chinchilla-Software-Com/HubSpot.NET/blob/master/LICENSE</PackageLicenseUrl>
-		-->
-		<PackageProjectUrl>https://github.com/Chinchilla-Software-Com/HubSpot.NET</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/Chinchilla-Software-Com/HubSpot.NET</RepositoryUrl>
+		<Copyright>2025 RoushTech, LLC</Copyright>
+		<PackageLicenseUrl>https://github.com/RoushTech/HubSpot.NET/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/RoushTech/HubSpot.NET</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/RoushTech/HubSpot.NET</RepositoryUrl>
 		<PackageTags>hubspot api wrapper c# contact company deal engagement properties crm</PackageTags>
 		<PackageReleaseNotes>
+            Version 1.5.3
+
+            * Update 
+
 			Version 1.5.2
 
 			* Implement Ticket to Deal Associations - community contribution thanks to https://github.com/avalanchis
@@ -90,10 +92,10 @@
 	</ItemGroup>
 	<ItemGroup>
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
-	<ItemGroup Condition=" '$(TargetFramework)' == 'NET452' ">
-		<PackageReference Include="RestSharp" Version="106.15.0" />
+	<ItemGroup Condition=" '$(TargetFramework)' == 'NET462' ">
+		<PackageReference Include="RestSharp" Version="109.0.1" />
 		<Reference Include="System.Net.Http" />
 	</ItemGroup>
 	<ItemGroup Condition=" '$(TargetFramework)' == 'NET451' ">
@@ -101,8 +103,8 @@
 		<Reference Include="System.Net.Http" />
 	</ItemGroup>
 	<ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-		<PackageReference Include="RestSharp" Version="106.15.0" />
-		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+    <PackageReference Include="RestSharp" Version="109.0.1" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
 	</ItemGroup>
 	<ItemGroup>
 		<Folder Include="Properties\" />
