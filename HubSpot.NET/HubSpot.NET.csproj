@@ -3,12 +3,12 @@
 	<PropertyGroup>
 		<TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Version>1.5.3</Version>
+		<VersionPrefix>1.5.3</VersionPrefix>
 		<Authors>RoushTech, LLC</Authors>
 		<Company>RoushTech, LLC</Company>
 		<Description>C# .NET Wrapper around the common HubSpot APIs.</Description>
 		<Copyright>2025 RoushTech, LLC</Copyright>
-		<PackageLicenseUrl>https://github.com/RoushTech/HubSpot.NET/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/RoushTech/HubSpot.NET</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/RoushTech/HubSpot.NET</RepositoryUrl>
 		<PackageTags>hubspot api wrapper c# contact company deal engagement properties crm</PackageTags>
