@@ -4,17 +4,19 @@
 		<TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Version>1.5.3</Version>
-		<Authors>Chinchilla Software Limited</Authors>
-		<Company>Chinchilla Software Limited</Company>
+		<Authors>RoushTech, LLC</Authors>
+		<Company>RoushTech, LLC</Company>
 		<Description>C# .NET Wrapper around the common HubSpot APIs.</Description>
-		<Copyright>2023 Chinchilla Software Limited.</Copyright>
-		<!--
-		<PackageLicenseUrl>https://github.com/Chinchilla-Software-Com/HubSpot.NET/blob/master/LICENSE</PackageLicenseUrl>
-		-->
-		<PackageProjectUrl>https://github.com/Chinchilla-Software-Com/HubSpot.NET</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/Chinchilla-Software-Com/HubSpot.NET</RepositoryUrl>
+		<Copyright>2025 RoushTech, LLC</Copyright>
+		<PackageLicenseUrl>https://github.com/RoushTech/HubSpot.NET/blob/master/LICENSE</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/RoushTech/HubSpot.NET</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/RoushTech/HubSpot.NET</RepositoryUrl>
 		<PackageTags>hubspot api wrapper c# contact company deal engagement properties crm</PackageTags>
 		<PackageReleaseNotes>
+            Version 1.5.3
+
+            * Update 
+
 			Version 1.5.2
 
 			* Implement Ticket to Deal Associations - community contribution thanks to https://github.com/avalanchis
