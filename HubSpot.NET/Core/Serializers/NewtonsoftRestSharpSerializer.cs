@@ -5,7 +5,8 @@
     using Newtonsoft.Json;
 	using Newtonsoft.Json.Converters;
 	using Newtonsoft.Json.Serialization;
-	using RestSharp.Serializers;
+    using RestSharp;
+    using RestSharp.Serializers;
 
 	public class NewtonsoftRestSharpSerializer : ISerializer
     {
@@ -43,6 +44,6 @@
         /// <summary>
         /// Content type for serialized content
         /// </summary>
-        public string ContentType { get; set; }
+        public ContentType ContentType { get; set; }
     }
 }
